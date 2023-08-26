@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "752199988195",
+    "project_id": "mygardenyt-4176d",
+    "storage_bucket": "mygardenyt-4176d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:752199988195:android:c5529012c7fbccac5e26d6",
+        "android_client_info": {
+          "package_name": "com.wa2goose.MyGardenYT"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "752199988195-1g3htdk17govath2eo7cfkvjhk2u8sep.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALxAm8MWcCDpKyweEMgDVhwZJcOhtbL98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "752199988195-1g3htdk17govath2eo7cfkvjhk2u8sep.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

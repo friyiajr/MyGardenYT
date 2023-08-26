@@ -2,8 +2,13 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import DonutChartContainer from "./DonutChart";
 import { BarChart } from "./BarChart";
+import { usePushNotifications } from "./usePushNotifications";
 
 export default function App() {
+  const { expoPushToken } = usePushNotifications();
+
+  console.log(expoPushToken);
+
   const samples = [200, 300, 400, 500, 400, 350, 400, 500, 600, 450, 300, 500];
 
   return (
