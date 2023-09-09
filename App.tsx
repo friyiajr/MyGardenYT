@@ -3,13 +3,23 @@ import { StyleSheet, Text, View } from "react-native";
 import DonutChartContainer from "./DonutChart";
 import { BarChart } from "./BarChart";
 import { usePushNotifications } from "./usePushNotifications";
+import { useEffect, useState } from "react";
 
 export default function App() {
   const { expoPushToken } = usePushNotifications();
-
   console.log(expoPushToken);
+  const [samples, setSamples] = useState<number[]>([]);
 
-  const samples = [200, 300, 400, 500, 400, 350, 400, 500, 600, 450, 300, 500];
+  useEffect(() => {
+    (async () => {
+      const response = await fetch(
+        "http://192.168.2.28:8000/analytics?userId=0000001"
+      );
+      const json = await response.json();
+      const samples = json.previousMoistureLevels.slice(-10);
+      setSamples(samples);
+    })();
+  }, []);
 
   return (
     <View style={styles.container}>
